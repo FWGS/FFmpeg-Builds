@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -v
 shopt -s globstar
 cd "$(dirname "$0")"
 source util/vars.sh
@@ -98,8 +99,11 @@ for ID in $(ls -1d scripts.d/??-* | sed -s 's|^.*/\(..\).*|\1|' | sort -u); do
 done
 
 to_df "FROM base"
-sed "s/__PREVLAYER__/$PREVLAYER/g" Dockerfile.final | sort -u >> Dockerfile
-rm Dockerfile.final
+
+if [ -f Dockerfile.final ]; then
+    sed "s/__PREVLAYER__/$PREVLAYER/g" Dockerfile.final | sort -u >> Dockerfile
+    rm Dockerfile.final
+fi
 
 ###
 ### Compile list of configure arguments and add them to the final Dockerfile
