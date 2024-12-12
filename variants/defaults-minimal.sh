@@ -1,2 +1,2 @@
 #!/bin/bash
-FF_CONFIGURE+=" --disabled-encoders --disable-muxers --disable-programs --disable-iconv"
+FF_CONFIGURE+=" --disable-encoders --disable-muxers --disable-avfilter --disable-avdevice --disable-autodetect --disable-iconv"
