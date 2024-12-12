@@ -133,11 +133,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-<<<<<<< HEAD
-        target: [win32,win64,winarm64,linux32,linux64,linuxarm64,linuxppc64,linuxmips64,linuxriscv64]
-=======
-        target: [win64,win32,linux64]
->>>>>>> 5b284a7 (Disable ARM targets for now, enable win32 target)
+        target: [win64,win32,linux64,linux32]
     steps:
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /opt/ghc /usr/local/.ghcup /usr/local/lib/android && df -h
@@ -193,7 +189,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win64,win32,linux64]
+        target: [win64,win32,linux64,linux32]
         variant: [lgpl-shared-minimal 8.1]
     steps:
       - name: Free Disk-Space
@@ -259,7 +255,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win64,win32,linux64]
+        target: [win64,win32,linux64,linux32]
         variant: [lgpl-shared-minimal 8.1]
     steps:
       - name: Free Disk-Space
