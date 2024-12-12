@@ -36,9 +36,9 @@ RUN \
 ENV FFBUILD_TOOLCHAIN=aarch64-ffbuild-linux-gnu \
     FFBUILD_RUST_TARGET="aarch64-unknown-linux-gnu"
 
-RUN \
-    rustup target add "$FFBUILD_RUST_TARGET" && \
-    echo "[target.$FFBUILD_RUST_TARGET]\nlinker = \"${FFBUILD_TOOLCHAIN}-gcc\"\nar = \"${FFBUILD_TOOLCHAIN}-gcc-ar\"\n" > "$CARGO_HOME"/config.toml
+#RUN \
+#    rustup target add "$FFBUILD_RUST_TARGET" && \
+#    echo "[target.$FFBUILD_RUST_TARGET]\nlinker = \"${FFBUILD_TOOLCHAIN}-gcc\"\nar = \"${FFBUILD_TOOLCHAIN}-gcc-ar\"\n" > "$CARGO_HOME"/config.toml
 
 ADD toolchain.cmake /toolchain.cmake
 ADD cross.meson /cross.meson

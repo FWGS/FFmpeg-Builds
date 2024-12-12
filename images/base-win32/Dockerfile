@@ -22,9 +22,9 @@ RUN \
 ENV FFBUILD_TOOLCHAIN=i686-w64-mingw32 \
     FFBUILD_RUST_TARGET=i686-pc-windows-gnu
 
-RUN \
-    rustup target add "$FFBUILD_RUST_TARGET" && \
-    echo "[target.$FFBUILD_RUST_TARGET]\nlinker = \"${FFBUILD_TOOLCHAIN}-gcc\"\nar = \"${FFBUILD_TOOLCHAIN}-gcc-ar\"\n" > "$CARGO_HOME"/config.toml
+#RUN \
+#    rustup target add "$FFBUILD_RUST_TARGET" && \
+#    echo "[target.$FFBUILD_RUST_TARGET]\nlinker = \"${FFBUILD_TOOLCHAIN}-gcc\"\nar = \"${FFBUILD_TOOLCHAIN}-gcc-ar\"\n" > "$CARGO_HOME"/config.toml
 
 ADD toolchain.cmake /toolchain.cmake
 ADD cross.meson /cross.meson
