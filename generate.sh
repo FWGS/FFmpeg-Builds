@@ -220,8 +220,11 @@ for SUBDEP in $(get_stagedeps_recursive "${ENTRYSCRIPT}"); do
 done
 
 to_df "FROM ${BASELAYER}"
-sort -u < Dockerfile.final >> Dockerfile
-rm Dockerfile.final
+
+if [ -f Dockerfile.final ]; then
+    sort -u < Dockerfile.final >> Dockerfile
+    rm Dockerfile.final
+fi
 
 FF_CONFIGURE="$(xargs <<< "$FF_CONFIGURE")"
 FF_CFLAGS="$(xargs <<< "$FF_CFLAGS")"
