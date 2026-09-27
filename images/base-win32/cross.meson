@@ -6,7 +6,6 @@ ranlib = 'i686-w64-mingw32-gcc-ranlib'
 strip = 'i686-w64-mingw32-strip'
 windres = 'i686-w64-mingw32-windres'
 dlltool = 'i686-w64-mingw32-dlltool'
-exe_wrapper = ['wine']
 
 [properties]
 needs_exe_wrapper = true

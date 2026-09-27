@@ -46,9 +46,6 @@ ENV FFBUILD_TOOLCHAIN=i686-ffbuild-linux-gnu \
 ADD toolchain.cmake /toolchain.cmake
 ADD cross.meson /cross.meson
 
-ADD gen-implib.sh /usr/bin/gen-implib
-RUN git clone --filter=blob:none --depth=1 https://github.com/yugr/Implib.so /opt/implib
-
 ENV PATH="/opt/ct-ng/bin:${PATH}" \
     FFBUILD_TARGET_FLAGS="--pkg-config=pkg-config --cross-prefix=${FFBUILD_TOOLCHAIN}- --arch=i686 --target-os=linux" \
     FFBUILD_CROSS_PREFIX="${FFBUILD_TOOLCHAIN}-" \
