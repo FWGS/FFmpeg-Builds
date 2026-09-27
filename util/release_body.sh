@@ -9,7 +9,7 @@ fi
 TAGNAME="$1"
 shift
 
-REPO="${GITHUB_REPOSITORY:-BtbN/FFmpeg-Builds}"
+REPO="${GITHUB_REPOSITORY:-FWGS/FFmpeg-Builds}"
 DL_BASE="https://github.com/${REPO}/releases/download/${TAGNAME}"
 
 TARGETS=(win64 winarm64 win32 linux64 linuxarm64 linux32 androidarm64 androidarm32 android64 android32)
