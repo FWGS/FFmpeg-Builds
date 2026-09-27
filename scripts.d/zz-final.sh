@@ -4,7 +4,6 @@ SCRIPT_SKIP="1"
 
 ffbuild_depends() {
     echo base
-    echo rpath
 }
 
 ffbuild_enabled() {
