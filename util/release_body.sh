@@ -12,7 +12,7 @@ shift
 REPO="${GITHUB_REPOSITORY:-BtbN/FFmpeg-Builds}"
 DL_BASE="https://github.com/${REPO}/releases/download/${TAGNAME}"
 
-TARGETS=(win64 winarm64 win32 linux64 linuxarm64 linux32)
+TARGETS=(win64 winarm64 win32 linux64 linuxarm64 linux32 androidarm64 androidarm32 android64 android32)
 VARIANTS=(gpl gpl-shared lgpl lgpl-shared)
 
 target_name() {
@@ -23,6 +23,10 @@ target_name() {
         linux64)     echo "Linux (x86_64)" ;;
         linuxarm64)  echo "Linux (arm64)" ;;
         linux32)     echo "Linux (x86)" ;;
+        androidarm64) echo "Android (arm64-v8a)" ;;
+        androidarm32) echo "Android (armeabi-v7a)" ;;
+        android64)   echo "Android (x86_64)" ;;
+        android32)   echo "Android (x86)" ;;
         *)           echo "$1" ;;
     esac
 }

@@ -1,0 +1,13 @@
+[binaries]
+c = 'arm-linux-androideabi-clang'
+cpp = 'arm-linux-androideabi-clang++'
+ld = 'arm-linux-androideabi-ld'
+ar = 'arm-linux-androideabi-ar'
+ranlib = 'arm-linux-androideabi-ranlib'
+strip = 'arm-linux-androideabi-strip'
+
+[host_machine]
+system = 'android'
+cpu_family = 'arm'
+cpu = 'armv7'
+endian = 'little'

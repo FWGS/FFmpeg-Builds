@@ -136,7 +136,7 @@ jobs:
       fail-fast: false
       matrix:
         runner: [ubuntu-latest]
-        target: [win32,win64,linux32,linux64]
+        target: [win32,win64,linux32,linux64,androidarm64,androidarm32,android64,android32]
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -194,7 +194,7 @@ jobs:
       fail-fast: false
       matrix:
         runner: [ubuntu-latest]
-        target: [win32,win64,linux32,linux64]
+        target: [win32,win64,linux32,linux64,androidarm64,androidarm32,android64,android32]
         variant: [lgpl-shared-minimal 8.1,lgpl-shared-minimal 9.0]
     steps:
       - name: Checkout
@@ -260,7 +260,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win32,win64,linux32,linux64]
+        target: [win32,win64,linux32,linux64,androidarm64,androidarm32,android64,android32]
         variant: [lgpl-shared-minimal 8.1,lgpl-shared-minimal 9.0]
     steps:
       - name: Checkout

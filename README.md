@@ -48,6 +48,13 @@ Available targets:
 * `win32` (x86 Windows)
 * `linux64` (x86_64 Linux, glibc>=2.28, linux>=4.18)
 * `linuxarm64` (arm64 (aarch64) Linux, glibc>=2.28, linux>=4.18)
+* `androidarm64` (arm64-v8a Android, API level >= 21)
+* `androidarm32` (armeabi-v7a Android, API level >= 21)
+* `android64` (x86_64 Android, API level >= 21)
+* `android32` (x86 Android, API level >= 21)
+
+The Android targets are built with the official Android NDK instead of a crosstool-NG toolchain.
+They only produce the libav* shared libraries (no programs), so only the `*-shared` variants are available for them.
 
 The linuxarm64 target will not build some dependencies due to lack of arm64 (aarch64) architecture support or cross-compiling restrictions.
 

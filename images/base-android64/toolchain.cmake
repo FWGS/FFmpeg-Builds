@@ -1,0 +1,10 @@
+set(ANDROID_ABI x86_64)
+set(ANDROID_PLATFORM android-$ENV{FFBUILD_ANDROID_API})
+set(ANDROID_STL c++_static)
+include(/opt/android-ndk/build/cmake/android.toolchain.cmake)
+
+list(APPEND CMAKE_FIND_ROOT_PATH /opt/ffbuild)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)

@@ -1,0 +1,13 @@
+[binaries]
+c = 'x86_64-linux-android-clang'
+cpp = 'x86_64-linux-android-clang++'
+ld = 'x86_64-linux-android-ld'
+ar = 'x86_64-linux-android-ar'
+ranlib = 'x86_64-linux-android-ranlib'
+strip = 'x86_64-linux-android-strip'
+
+[host_machine]
+system = 'android'
+cpu_family = 'x86_64'
+cpu = 'x86_64'
+endian = 'little'
